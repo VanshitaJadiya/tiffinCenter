@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodForYou</title>
+    <link rel="icon" href="favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheets/loco.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Marcellus', serif;
+        }
+
+        body,
+        html {
+            /* width: 100vw;
+            overflow-x: hidden; */
+            /* display: flex; */
+            justify-content: center;
+            font-family: 'Marcellus', serif;
+            /* overflow: hidden; */
+           
+
+            
+        }
+        body{
+            /* background: url(../public/images/pictures/formmbg.webp) ; */
+            background: linear-gradient(150deg,   #e0ee75, rgb(174 231 168))
+            /* display: flex;
+            align-items: center;
+            justify-content: center; */
+
+        }
+        
+        .main{
+            max-width: 700px;
+            width: 100%;
+            background: #fff;
+
+        }
+        .title{
+            font-size: 50px;
+            font-family: 'Times New Roman', Times, serif;
+            text-decoration: underline;
+        }
+        form {
+            max-width: 700px;
+            width: 100%;
+            background: #fff;
+
+
+            border: 2px solid black;
+            /* border-style:dotted; */
+            width: 80vw;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10vh;
+            border-radius: 10px;
+            margin-top: 100px;
+            font-size: 25px;
+
+        }
+        /* .main #title{
+            color: black;
+        } */
+        form>div{
+           
+
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-shadow: 1px 1px 2px rgb(119, 119, 118);
+            margin: 10px;
+            /* color: #472D2D; */
+
+        }
+        button{
+            padding: 10px;
+            border-radius: 6px;
+            outline: none;
+            color: #fff;
+            font-size: large;
+            border:none;
+            width: 180px;
+            background: linear-gradient(135deg,   #e0ee75, rgb(174 231 168))
+            
+        }
+        /* button input{
+            font-size: 10px;
+        } */
+        input{
+            /* font-size: 34px; */
+            padding: 10px;
+            margin-left: 10px;
+            /* border-bottom-width: 2px; */
+            /* box-shadow: #472D2D 4px; */
+            /* transition: all 0.3s ease; */
+        }
+        textarea{
+            padding: 10px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div id="name"><i class="ri-home-heart-fill"></i> Food For You</div>
+        <div id="links"><a href="/">Home<i class="ri-home-line"></i></a><a href="/about">About<i class="ri-chat-2-line"></i></a><a href="/delivery">Delivery Details<i class="ri-briefcase-5-line"></i></a><a href="/menu">Menu<i class="ri-menu-add-line"></i></a><a
+            href="/contact">Book Tiffin<i class="ri-contacts-book-line"></i></a></div>
+    </div>
+    <div id="main" style="display: flex;
+    align-items: center;
+    justify-content: center;">
+    <form action="/submitresponse" method="post">
+        <div class="title" > Feedback Form  </div>
+        <div>Full Name :  <input type="text" name="name" id="" placeholder="Enter your name"> </div>
+        <div>Image-url: <input type="text" name="image" id=""placeholder="Enter your image url"></div>
+         <div>Your Response : <textarea name="response" id="" cols="50" rows="5" placeholder=" Add your response here"></textarea></div>
+         <!-- <div><button>Submit</button></div> -->
+         <button>Submit</button>
+      </form>
+    </div>
+</body>
+
+</html>

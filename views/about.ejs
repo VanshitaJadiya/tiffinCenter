@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FoodForYou</title>
+    <link rel="icon" href="favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheets/loco.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../stylesheets/style.css">
+</head>
+<body>
+    <div id="header">
+        <div id="name"><i class="ri-home-heart-fill"></i> Food For You</div>
+        <div id="links"><a href="/">Home<i class="ri-home-line"></i></a><a href="/about">About<i class="ri-chat-2-line"></i></a><a href="/delivery">Delivery Details<i class="ri-briefcase-5-line"></i></a><a href="/menu">Menu<i class="ri-menu-add-line"></i></a><a
+            href="/contact">Book Tiffin<i class="ri-contacts-book-line"></i></a></div>
+    </div>
+    <div id="main" >
+        <div id="third" style="height: 130vh; margin-top: 10vh;">
+            <h1 data-scroll data-scroll-speed="1">Our Motive </h1>
+            <p data-scroll data-scroll-speed="1">To provide fresh and healthy food so that nobody miss their home<br>
+                and stay healthy and happy.</p>
+            <div id="innerdiv3" data-scroll data-scroll-speed="3.5">
+                <!-- <div id="left"><img src=https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80" alt=""></div>
+                    <div id="right"><h2>On-Time Service</h2></div> -->
+                <div id="circle1">
+                    <h2>On-Time <br>Service</h2>
+                </div>
+                <div id="circle4" data-scroll data-scroll-speed="-3.5">
+                    <h2>Healthy <br>Food</h2>
+                </div>
+                <div id="circle2"><img src="../images/pictures/thali.png" alt=""></div>
+                <div id="circle3" data-scroll data-scroll-speed="-3.5">
+                    <h2>Clean<br> Cooking</h2>
+                </div>
+                <div id="circle5">
+                    <h2>Affordable <br>Prize</h2>
+                </div>
+
+
+            </div>
+            <p>Serving since 2010. <br>Trust onces, Try once.</p>
+
+
+        </div>
+        <div id="fifth"  style="height: 120vh;">
+            <h1 data-scroll data-scroll-speed="1">Happy Clients </h1>
+            <p data-scroll data-scroll-speed="1">Serving 100+ People away from their home.</p>
+            <div id="testi" data-scroll data-scroll-speed="2.5">
+                <div class="test" id="div1">
+                    <div class="image"><img src="../images/pictures/men1.avif" alt=""></div>
+                    <div class="comment">
+                        <p>The only tiffin centre who provides best quality.<br><br>-Animesh</p>
+                    </div>
+                </div>
+                <div class="test" id="div2">
+                    <div class="image"><img src="../images/pictures/men2.jpg" alt=""></div>
+                    <div class="comment">
+                        <p>It's a complete package...quantity,quality,taste and PRICE!
+                            <br><br>-Shruti
+                        </p>
+                    </div>
+                </div>
+                <div class="test" id="div3">
+                    <div class="image"><img src="../images/pictures/men3.jpg" alt=""></div>
+                    <div class="comment">
+                        <p>Satisfaction for those who enjoy simple cozy and less oily food!!<br><br>-Akhil</p>
+                    </div>
+                </div>
+
+            </div>
+            <div id="but">
+                <a href="/addResponse"><button id="ResponseBtn" data-scroll data-scroll-speed="1">Add Your Response <i class="ri-menu-add-line"></i></button></a>
+                <a href="/showAllResponse"><button id="ResponseBtn" data-scroll data-scroll-speed="1">Show All Response <i class="ri-menu-add-line"></i></button></a>
+    
+            </div>
+
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"
+        integrity="sha512-Mf/xUqfWvDIr+1B6zfnIDIiG7XHzyP/guXUWgV6PgaQoIFeXkJQR5XWh9fqAiCiRCpemabt3naV4jhDWVnuYDQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+    gsap.to(".test",{
+        scrollTrigger:{
+            scroller:"#main",
+            trigger:".test",
+            start:"top 90%",
+            // markers: true,
+        },
+        opacity: 1,
+        y:20,
+        duration:1.5,
+        ease:"expo.easeInOut"
+    })
+
+    function cardMaking(){
+
+    }
+    cardMaking();
+    </script>
+    <script src="../javascripts/script.js"></script>
+</body>
+</html>

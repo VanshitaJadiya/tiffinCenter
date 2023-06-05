@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodForYou</title>
+    <link rel="icon" href="favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheets/loco.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body,
+        html {
+            width: 100vw;
+            overflow-x: hidden;
+            font-family: 'Marcellus', serif;
+            /* overflow: hidden; */
+            height: 100%;
+        }
+
+        #main {
+            width: 100vw;
+            height: 100%;
+            /* display: flex; */
+            /* justify-content: space-evenly; */
+            /* align-items: center; */
+            
+
+            column-count: 5;
+            padding: 3%;
+
+
+        }
+
+        .cards {
+            break-inside: avoid;
+
+            width: 17vw;
+            /* height: 20dvh; */
+            background-color: #FFD24C;
+            /* border-radius: 50px; */
+            margin-bottom: 3vh;
+            padding: 20px;
+            /* position: relative; */
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            /* z-index: 100000000; */
+        }
+
+        #image {
+            width: 120px;
+            height: 120px;
+            border-radius: 70px;
+            overflow: hidden;
+            border: solid #4a3737;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            /* position: relative; 
+             top:-30px;
+            left:140px */
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 {
+            /* padding-top: 20px; */
+            /* padding-bottom: 30px; */
+            font-size: 20px;
+            color: #4a3737;
+        }
+
+        h3 {
+            font-size: 15px;
+            text-align: left;
+            /* color: #635666;  */
+            color: #4a3737;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="header">
+        <div id="name"><i class="ri-home-heart-fill"></i> Food For You</div>
+        <div id="links"><a href="/">Home<i class="ri-home-line"></i></a><a href="/about">About<i class="ri-chat-2-line"></i></a><a href="/delivery">Delivery Details<i class="ri-briefcase-5-line"></i></a><a href="/menu">Menu<i class="ri-menu-add-line"></i></a><a
+            href="/contact">Book Tiffin<i class="ri-contacts-book-line"></i></a></div>
+    </div>
+    <div id="main" style="padding-top: 20vh;">
+        <% alldata.forEach(function(element) { %>
+            <div class="cards" >
+                <h1> <%= element.name %></h1>
+                <div id="image"><img src="<%= element.image %>" alt=""></div>
+                <h3  style="padding: 2px; overflow: hidden;">
+                    <%= element.response %>
+                </h3>
+                <!-- <a href="/delete/<%= element.id %>">delete item</a> -->
+            </div>
+            <% }) %>
+    </div>
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"
+        integrity="sha512-Mf/xUqfWvDIr+1B6zfnIDIiG7XHzyP/guXUWgV6PgaQoIFeXkJQR5XWh9fqAiCiRCpemabt3naV4jhDWVnuYDQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="../javascripts/script.js"></script>
+</body>
+
+</html>

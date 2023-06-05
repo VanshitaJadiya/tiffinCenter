@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodForYou</title>
+    <link rel="icon" href="favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheets/loco.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <style>
+        @supports (animation: grow .5s cubic-bezier(.25, .25, .25, 1) forwards) {
+             .tick {
+                stroke-opacity: 0;
+                stroke-dasharray: 29px;
+                stroke-dashoffset: 29px;
+                animation: draw .5s cubic-bezier(.25, .25, .25, 1) forwards;
+                animation-delay: .6s
+            }
+        
+            .circle {
+                fill-opacity: 0;
+                stroke: #219a00;
+                stroke-width: 16px;
+                transform-origin: center;
+                transform: scale(0);
+                animation: grow 1s cubic-bezier(.25, .25, .25, 1.25) forwards;   
+            }   
+        }
+        
+        @keyframes grow {
+            60% {
+                transform: scale(.8);
+                stroke-width: 4px;
+                fill-opacity: 0;
+            }
+            100% {
+                transform: scale(.9);
+                stroke-width: 8px;
+                fill-opacity: 1;
+                fill: #219a00;
+            }
+        }
+        
+        @keyframes draw {
+            0%, 100% { stroke-opacity: 1; }
+            100% { stroke-dashoffset: 0; }
+        }
+        
+        
+        
+        :root {
+          --theme-color: var(--color-purple);
+        }
+        
+        body {
+            height: 100vh;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+        }
+        #cntdiv{
+            margin: 10vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10vh;
+        }
+
+        </style>
+</head>
+<body>
+    <div id="header">
+        <div id="name"><i class="ri-home-heart-fill"></i> Food For You</div>
+        <div id="links"><a href="/">Home<i class="ri-home-line"></i></a><a href="/about">About<i class="ri-chat-2-line"></i></a><a href="/delivery">Delivery Details<i class="ri-briefcase-5-line"></i></a><a href="/menu">Menu<i class="ri-menu-add-line"></i></a><a
+            href="/contact">Book Tiffin<i class="ri-contacts-book-line"></i></a></div>
+    </div>
+    <div id="cntdiv"><h1 style="margin: 50px;  color: #4a3737;">Order Placed SuccessFully </h1>
+
+        <div class="svg-container">    
+            <svg class="ft-green-tick" xmlns="http://www.w3.org/2000/svg" height="100" width="100" viewBox="0 0 48 48" aria-hidden="true">
+                <circle class="circle" fill="#5bb543" cx="24" cy="24" r="22"/>
+                <path class="tick" fill="none" stroke="#FFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M14 27l5.917 4.917L34 17"/>
+            </svg>
+        </div></div>
+    <script>
+        let path = document.querySelector(".tick");
+let length = path.getTotalLength();
+
+console.log(length); 
+    </script>
+</body>
+</html>
