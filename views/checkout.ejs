@@ -18,38 +18,40 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="../stylesheets/loco.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../stylesheets/style.css">
+
     <style>
-        *{
+        * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
         }
-        body{
+
+        body {
             width: 100vw;
             height: 100vh;
             overflow: hidden;
         }
+
         #main {
             width: 100vw;
             height: 100vh;
             display: flex;
             align-items: center;
-            /* justify-content: center; */
             flex-direction: column;
             position: relative;
-    font-family: 'Marcellus', serif;
+            font-family: 'Marcellus', serif;
 
         }
 
         #maindiv {
             width: 80%;
             height: 65%;
-            border: 2px solid #4a3737;
+            border: 0.2vw solid #4a3737;
             position: relative;
             margin-top: 2%;
-            padding: 30px;
+            padding: 3vw;
             display: flex;
-            /* align-items: center; */
             justify-content: center;
             flex-direction: column;
 
@@ -57,20 +59,52 @@
 
         h1 {
             margin-top: 3%;
-            font-size: 70px;
+            font-size: 3vw;
             color: #4a3737;
-            /* position: absolute; */
-            /* top:-30% */
-            
+
+
         }
-        h3{
-            font-size: 25px;
-            margin:1%;
+
+        h3 {
+            font-size: 2vw;
+            margin: 1%;
+            margin-bottom: 0.2vh;
         }
-        button{
-            margin:1%;
+
+        button {
+            margin: 1%;
             width: fit-content;
-            padding: 4px;
+            padding: 1vw;
+        }
+
+        @media (max-width:1000px) {
+            h1 {
+                font-size: 5vw;
+            }
+            h3{
+                font-size: 3vw;
+            }
+
+        }
+
+        @media (max-width:700px) {
+            h1 {
+                font-size: 7vw;
+            }
+
+        }
+        @media (max-width:600px) {
+            h3 {
+                font-size: 4vw;
+            }
+
+        }
+
+        @media (max-width:400px) {
+            h1 {
+                font-size: 9vw;
+            }
+
         }
     </style>
 </head>
@@ -79,13 +113,19 @@
     <div id="main">
         <h1>CheckOut</h1>
         <div id="maindiv">
-            <h3>NAME : <%= data.fname %> <%= data.lname %> </h3>
-            <h3>PHONE : <%= data.phone %> </h3>
-            <h3>EMAIL : <%= data.email %>  </h3>
-            <h3>MEAL TIME/ DATE : <%=data.mealTime %> / <%= data.mealDate %></h3>
-            <h3>ADDRESS : <%= data.Address %> </h3>
+            <h3>NAME : <%= data.fname %>
+                    <%= data.lname %>
+            </h3>
+            <h3>PHONE : <%= data.phone %>
+            </h3>
+            <h3>EMAIL : <%= data.email %>
+            </h3>
+            <h3>MEAL TIME/ DATE : <%=data.mealTime %> / <%= data.mealDate %>
+            </h3>
+            <h3>ADDRESS : <%= data.Address %>
+            </h3>
             <button id="rzp-button1">Make Payment</button>
-           
+
         </div>
     </div>
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
@@ -97,87 +137,91 @@
         integrity="sha512-Mf/xUqfWvDIr+1B6zfnIDIiG7XHzyP/guXUWgV6PgaQoIFeXkJQR5XWh9fqAiCiRCpemabt3naV4jhDWVnuYDQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../javascripts/script.js"></script>
+
 
     <script>
-        var data =JSON.parse(`<%- JSON.stringify(data) %>`)
-        var orderId ;
-$(document).ready(function(){
-    var settings = {
-  "url": "/create/orderId",
-  "method": "POST",
-  "timeout": 0,
-  "headers": {
-    "Content-Type": "application/json"
-  },
-//   "data": JSON.stringify({
-//     "amount": "6000"
-//   }),
-};
+        var data = JSON.parse(`<%- JSON.stringify(data) %>`)
+        var orderId;
+        $(document).ready(function () {
+            var settings = {
+                "url": "/create/orderId",
+                "method": "POST",
+                "timeout": 0,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                //   "data": JSON.stringify({
+                //     "amount": "6000"
+                //   }),
+            };
 
-//creates new orderId everytime
-$.ajax(settings).done(function (response) {
+            //creates new orderId everytime
+            $.ajax(settings).done(function (response) {
 
-  orderId=response.id;
-  console.log(orderId);
-  $("button").show();
+                orderId = response.id;
+                console.log(orderId);
+                $("button").show();
 
 
-var options = {
-    "key": "rzp_test_r6EJwrxJbscSV9", // Enter the Key ID generated from the Dashboard
-    "amount": "6000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
-    "currency": "INR",
-    "name": "Tiffin",
-    "description": "Your Order of tiffin",
-    "image": "",
-    "order_id": orderId, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-    "handler": function (response){
-        var settings = {
-  "url": "/api/payment/verify",
-  "method": "POST",
-  "timeout": 0,
-  "headers": {
-    "Content-Type": "application/json"
-  },
-  "data": JSON.stringify({response}),
-}
-$.ajax(settings).done(function(response){
-      if(response.signatureIsValid == 'true'){
-        window.location.href='/success';
-      }else{
-        alert('Sorry, Payment Failed');
-      }
-    })
-    },
-    "prefill": {
-        "name": data.fname,
-        "email": data.email,
-        "contact": data.phone
-    },
-    "notes": {
-        "address": "Razorpay Corporate Office"
-    },
-    "theme": {
-        "color": "#3399cc"
-    }
-};
-var rzp1 = new Razorpay(options);
-rzp1.on('payment.failed', function (response){
-        alert(response.error.code);
-        alert(response.error.description);
-        alert(response.error.source);
-        alert(response.error.step);
-        alert(response.error.reason);
-        alert(response.error.metadata.order_id);
-        alert(response.error.metadata.payment_id);
-});
-document.getElementById('rzp-button1').onclick = function(e){
-    e.preventDefault();
-    console.log('hello')
-    rzp1.open();
-}
-});
-});
+                var options = {
+                    "key": "rzp_test_r6EJwrxJbscSV9", // Enter the Key ID generated from the Dashboard
+                    "amount": "6000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+                    "currency": "INR",
+                    "name": "Tiffin",
+                    "description": "Your Order of tiffin",
+                    "image": "",
+                    "order_id": orderId, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+                    "handler": function (response) {
+                        var settings = {
+                            "url": "/api/payment/verify",
+                            "method": "POST",
+                            "timeout": 0,
+                            "headers": {
+                                "Content-Type": "application/json"
+                            },
+                            "data": JSON.stringify({ response }),
+                        }
+                        $.ajax(settings).done(function (response) {
+                            if (response.signatureIsValid == 'true') {
+                                window.location.href = '/success';
+                            } else {
+                                alert('Sorry, Payment Failed');
+                            }
+                        })
+                    },
+                    "prefill": {
+                        "name": data.fname,
+                        "email": data.email,
+                        "contact": data.phone
+                    },
+                    "notes": {
+                        "address": "Razorpay Corporate Office"
+                    },
+                    "theme": {
+                        "color": "#3399cc"
+                    }
+                };
+                var rzp1 = new Razorpay(options);
+                rzp1.on('payment.failed', function (response) {
+                    alert(response.error.code);
+                    alert(response.error.description);
+                    alert(response.error.source);
+                    alert(response.error.step);
+                    alert(response.error.reason);
+                    alert(response.error.metadata.order_id);
+                    alert(response.error.metadata.payment_id);
+                });
+                document.getElementById('rzp-button1').onclick = function (e) {
+                    e.preventDefault();
+                    console.log('hello')
+                    rzp1.open();
+                }
+            });
+        });
 
     </script>
 </body>

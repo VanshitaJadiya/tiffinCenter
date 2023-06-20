@@ -1,7 +1,12 @@
 <!DOCTYPE html>
+<html lang="en">
+
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FoodForYou</title>
     <link rel="icon" href="favicon.ico">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
@@ -16,70 +21,92 @@
     <link rel="stylesheet" href="../stylesheets/loco.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../stylesheets/style.css">
-    <link rel="stylesheet" href="../stylesheets/bookstyle.css">
 
     <style>
-        
+        button {
+            border-radius: 1vw;
+            width: fit-content;
+            padding: 1vh;
+        }
+        /* #innerdiv5{
+            width: 70%;
+            height:65%;
+        } */
     </style>
 </head>
+
 <body>
     <div id="header">
         <div id="name"><i class="ri-home-heart-fill"></i> Food For You</div>
-        <div id="links"><a href="/">Home<i class="ri-home-line"></i></a><a href="/about">About<i class="ri-chat-2-line"></i></a><a href="/delivery">Delivery Details<i class="ri-briefcase-5-line"></i></a><a href="/menu">Menu<i class="ri-menu-add-line"></i></a><a
-            href="/contact">Book Tiffin<i class="ri-contacts-book-line"></i></a></div>
+        <div id="links"><a href="/">Home<i class="ri-home-line"></i></a><a href="/about">About<i
+                    class="ri-chat-2-line"></i></a><a href="/delivery">Delivery Details<i
+                    class="ri-briefcase-5-line"></i></a><a href="/menu">Menu<i class="ri-menu-add-line"></i></a><a
+                href="/contact">Book Tiffin<i class="ri-contacts-book-line"></i></a></div>
+                <div id="linked"><i class="ri-align-justify"></i>
+                    <div id="linkbox">
+                        <a href="/" style="padding-top: 0vw;">Home<i class="ri-home-line"></i></a><a href="/about">About<i
+                            class="ri-chat-2-line"></i></a><a href="/delivery">Delivery Details<i
+                            class="ri-briefcase-5-line"></i></a><a href="/menu">Menu<i class="ri-menu-add-line"></i></a><a
+                        href="/contact">Book Tiffin<i class="ri-contacts-book-line"></i></a>
+                    </div>
+                </div>
     </div>
-    <div id="main" >
-       
-        <div id="order" style="margin-top: 10vh; height: 80vh;">
+    <div id="main">
+
+        <div id="order" >
             <h1 data-scroll data-scroll-speed="1">Book your tiffin </h1>
             <div id="innerdiv5" data-scroll data-scroll-speed="2.5">
-                <h4 style="position: absolute; right:8%; bottom: 2%">* All feilds are Mandatory *</h4>
-                <form action="/submitOrder" id="Response" method="post">
-                    
-                    <label for="fname">First name:</label>
-                    <input type="text" id="fname"  name="fname" value="" placeholder="Enter your first name">
-                    <label for="lname">Last name:</label>
-                    <input type="text" id="lname" name="lname" value="" placeholder="Enter your last name"><br>
-                    <label for="email">Email:</label>
-                    <input type="text" id="email" name="email" value="" placeholder="Enter your email">
-                    <label for="phone">Phone number:</label>
-                    <input type="text" id="phone" name="phone" value="" placeholder="Enter your phone number"><br>
-                    <label for="meal">Meal time: </label>
-                    <input type="text" id="mtime" name="mtime" value="" placeholder="Enter your meal time">
-                    <label for="meal">Meal Date: </label>
-                    <input type="text" id="mdate" name="mdate" value="" placeholder="Enter your meal date"><br><br>
-                    <label for="message">Address: </label><br>
+                <h4 style="position: absolute; right:8%; ">* All feilds are Mandatory *</h4>
+                <form action="/submitOrder" id="Response" method="post" style="padding-top: 5vh;">
+                    <div class="colss">
+                        <label for="fname">First name:</label>
+                    <input type="text" id="fname" name="fname" value="">
+                    </div>
+                    <div class="colss">
+                        <label for="lname">Last name:</label>
+                    <input type="text" id="lname" name="lname" value="" >
+                    </div>
+                    <div class="colss">
+                        <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" value="" >
+                    </div>
+                    <div class="colss">
+                        <label for="phone">Phone number:</label>
+                    <input type="text" id="phone" name="phone" value="">
+                    </div>
+                    <div class="colss">
+                        <label for="meal">Meal time: </label>
+                    <input type="text" id="mtime" name="mtime" value="">
+                    </div>
+                    <div class="colss">
+                        <label for="meal">Meal Date: </label>
+                    <input type="text" id="mdate" name="mdate" value="">
+                    </div>
+                    <div class="colss">
+                        <label for="message">Address: </label>
 
-                    <textarea id="message" name="address" rows="10" cols="80" placeholder="Enter your address to be delivered">
-                    
+                    <textarea id="message" name="address" rows="3" cols="20"
+                        placeholder="Enter your address to be delivered">
+
                         </textarea><br>
+                    </div>
                     
                     
-                <button  id="Buy" type="submit" style="padding: 5px;">Proceed to Checkout</button>
+                    
+                    
+                    
+                    
+                    
 
-                  </form>
-                 
+                    <!-- <input  type="button" value="Proceed"> -->
+                    <button id="Buy" type="submit" >Proceed</button>
+
+                </form>
+
             </div>
 
         </div>
-        <div id="seventh" style="margin-top: 10vh; height:30vh">
-           
-            <p style=" font-size: 40px;
-            text-align: center;
-            font-family: 'Marcellus', serif;
-            color: #635666; margin-top: 0vh;">You can add your reviews or write us on..</p>
-            <div id="sixth" >
-                <!-- <h1 data-scroll data-scroll-speed="1">Contact Us </h1> -->
-                <div id="icon">
-                    <i class="ri-instagram-fill"></i>
-                    <i class="ri-phone-fill"></i>
-                    <i class="ri-whatsapp-fill"></i>
-                    <i class="ri-mail-fill"></i>
-                </div>
-            </div>
 
-
-        </div>
     </div>
     <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
@@ -90,7 +117,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="../javascripts/script.js"></script>
-    
-       
+
+
 </body>
+
 </html>

@@ -6,7 +6,7 @@ var tiffinSchema= mongoose.Schema({
   email: String,
   phone: Number,
   mealTime : String,
-  mealDate: Date,
+  mealDate: String,
   Address : String
 })
 module.exports = mongoose.model("tiffin",tiffinSchema);

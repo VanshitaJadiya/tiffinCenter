@@ -1,161 +1,11 @@
-<!-- <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food For You</title>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            font-family: 'Marcellus', serif;
-        }
-
-        html,
-        body {
-            width: 100%;
-            height: 100%;
-        }
-
-        #header {
-            width: 100vw;
-            height: 10vh;
-            position: fixed;
-            background-color: #605f5f;
-            position: fixed;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            z-index: 99999;
-        }
-
-        #logo {
-            width: 50px;
-            height: 50px;
-            background-color: #fff;
-            border-radius: 50%;
-            /* position: absolute; */
-            /* margin-top: 10px; */
-            margin-left: 40px;
-        }
-
-        #header h2 {
-            color: black;
-            font-size: 50px;
-        }
-
-        #links {
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            width: 30vw;
-
-        }
-
-        #links a {
-            text-decoration: none;
-            color: black;
-        }
-
-        #links a:hover {
-            color: rgb(255, 245, 245);
-        }
-
-        #main {
-            width: 100vw;
-            height: 100%;
-        }
-
-        #first {
-            width: 100vw;
-            height: 100vh;
-            /* overflow: hidden; */
-            position: relative;
-            overflow: hidden;
-
-
-        }
-
-        #firsthalf {
-            width: 50vw;
-            height: 100vh;
-            background-position: center;
-            background-size: cover;
-            background-image: url(https://www.shutterstock.com/image-photo/indian-vegetarian-lunch-box-tiffin-made-1781289758);
-
-        }
-
-        #first #abcd {
-            position: absolute;
-            top: 38%;
-            right: 5%;
-
-
-        }
-
-        #abcd h1 {
-            /* font-weight: 100; */
-            font-size: 80px;
-            /* color: #472D2D; */
-
-        }
-
-        #abcd h1 span {
-            display: inline-block;
-            transform: translateY(100%);
-            display: none;
-            opacity: 0;
-
-        }
-
-        .arrow-right {
-            position: absolute;
-            top:-410px;
-            width: 0;
-            height: 0;
-            border-top: 800px solid transparent;
-            border-bottom: 800px solid transparent;
-            border-left: 800px solid black;
-            overflow: hidden;
-
-
-        }
-       
-    </style>
-</head>
-
-<body>
-    <div id="header">
-        <div id="logo"><img src="" alt=""></div>
-        <h2>Food For You</h2>
-        <div id="links"><a href="/index">Home</a><a href="/about">About</a><a href="/delivery">Delivery Details</a><a
-                href="/menu">Menu</a><a href="/contact">Contact Us</a></div>
-    </div>
-    <div id="main">
-        <div id="first">
-            <div class="arrow-right"></div>
-            <div id="abcd">
-                <h1>We Pack The <br> Deliciousness !</h1>
-            </div>
-
-        </div>
-    </div>
-
-</body>
-
-</html> -->
-
-
-<!DOCTYPE html>
-<html>
-
-<head>
     <title>FoodForYou</title>
     <link rel="icon" href="favicon.ico">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
@@ -170,21 +20,31 @@
     <link rel="stylesheet" href="../stylesheets/loco.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../stylesheets/style.css">
+    <!-- <link rel="stylesheet" href="../stylesheets/styles2.css"> -->
+  
 </head>
 
 <body>
     <div id="header">
         <div id="name"><i class="ri-home-heart-fill"></i> Food For You</div>
-        <div id="links"><a href="/">Home<i class="ri-home-line"></i></a><a href="/about">About<i class="ri-chat-2-line"></i></a><a href="/delivery">Delivery Details<i class="ri-briefcase-5-line"></i></a><a href="/menu">Menu<i class="ri-menu-add-line"></i></a><a
+        <div id="links"><a href="/">Home<i class="ri-home-line"></i></a><a href="/about">About<i
+                    class="ri-chat-2-line"></i></a><a href="/delivery">Delivery Details<i
+                    class="ri-briefcase-5-line"></i></a><a href="/menu">Menu<i class="ri-menu-add-line"></i></a><a
                 href="/contact">Book Tiffin<i class="ri-contacts-book-line"></i></a></div>
+                <div id="linked"><i class="ri-align-justify"></i>
+                    <div id="linkbox">
+                        <a href="/" style="padding-top: 0vw;">Home<i class="ri-home-line"></i></a><a href="/about">About<i
+                            class="ri-chat-2-line"></i></a><a href="/delivery">Delivery Details<i
+                            class="ri-briefcase-5-line"></i></a><a href="/menu">Menu<i class="ri-menu-add-line"></i></a><a
+                        href="/contact">Book Tiffin<i class="ri-contacts-book-line"></i></a>
+                    </div>
+                </div>
     </div>
     <div id="main">
 
         <div id="first">
-            <!-- <div id="im"><img src="thali.png" alt=""></div> -->
             <div id="abcd" data-scroll data-scroll-speed="1">
                 <h1 data-scroll data-scroll-speed="1">Food,Just Like Your Home!</h1>
-                <!-- <h1 class="a">Just Like Your Home!</h1> -->
             </div>
 
         </div>
@@ -193,19 +53,18 @@
             <p data-scroll data-scroll-speed="1">To provide fresh and healthy food so that nobody miss their home<br>
                 and stay healthy and happy.</p>
             <div id="innerdiv3" data-scroll data-scroll-speed="3.5">
-                <!-- <div id="left"><img src=https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80" alt=""></div>
-                    <div id="right"><h2>On-Time Service</h2></div> -->
-                <div id="circle1">
+
+                <div class="circ" id="circle1">
                     <h2>On-Time <br>Service</h2>
                 </div>
-                <div id="circle4" data-scroll data-scroll-speed="-3.5">
+                <div class="circ" id="circle4" data-scroll data-scroll-speed="-3.5">
                     <h2>Healthy <br>Food</h2>
                 </div>
-                <div id="circle2"><img src="../images/pictures/thali.png" alt=""></div>
-                <div id="circle3" data-scroll data-scroll-speed="-3.5">
+                <div  id="circle2"><img src="../images/pictures/thali.png" alt=""></div>
+                <div class="circ" id="circle3" data-scroll data-scroll-speed="-3.5">
                     <h2>Clean<br> Cooking</h2>
                 </div>
-                <div id="circle5">
+                <div class="circ" id="circle5">
                     <h2>Affordable <br>Prize</h2>
                 </div>
 
@@ -222,7 +81,7 @@
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div id="bf">
+                                <div id="bf" class="ttt">
                                     <div class="img1"><img src="../images/pictures/pohajalebi.jpg" alt=""></div>
                                     <div class="img2"><img src="../images/pictures/aalopudi.jpg" alt=""></div>
                                     <h2>BREAKFAST</h2>
@@ -238,7 +97,7 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div id="lunch">
+                                <div id="lunch" class="ttt">
                                     <div class="img1"><img src="../images/pictures/daalchawal.jpg" alt=""></div>
                                     <div class="img2"><img src="../images/pictures/MasalaBhindi.jpg" alt=""></div>
                                     <h2>LUNCH</h2>
@@ -251,7 +110,7 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div id="eve">
+                                <div id="eve" class="ttt">
                                     <div class="img1"><img src="../images/pictures/pasta.jpg" alt=""></div>
                                     <div class="img2"><img src="../images/pictures/sandwich.jpg" alt=""></div>
                                     <h2>EVENING SNACKS</h2>
@@ -263,7 +122,7 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div id="dinner">
+                                <div id="dinner" class="ttt">
                                     <div class="img1"><img src="../images/pictures/daalchawal.jpg" alt=""></div>
                                     <div class="img2"><img src="../images/pictures/rajma.jpg" alt=""></div>
                                     <h2>DINNER</h2>
@@ -329,9 +188,6 @@
             </div>
 
         </div>
-        <!-- </div>
-
-            </div> -->
 
 
         <div id="forth">
@@ -378,7 +234,7 @@
                 <div class="test" id="div2">
                     <div class="image"><img src="../images/pictures/men2.jpg" alt=""></div>
                     <div class="comment">
-                        <p>It's a complete package...quantity,quality,taste and PRICE!
+                        <p>It's a complete package ... quantity, quality, taste and PRICE!
                             <br><br>-Shruti
                         </p>
                     </div>
@@ -391,53 +247,23 @@
                 </div>
             </div>
             <div id="but">
-                <a href="/addResponse"><button id="ResponseBtn" data-scroll data-scroll-speed="1">Add Your Response <i class="ri-menu-add-line"></i></button></a>
-                <a href="/showAllResponse"><button id="ResponseBtn" data-scroll data-scroll-speed="1">Show All Response <i class="ri-menu-add-line"></i></button></a>
-    
+                <a href="/addResponse"><button id="ResponseBtn" data-scroll data-scroll-speed="1">Add Your Response <i
+                            class="ri-menu-add-line"></i></button></a>
+                <a href="/showAllResponse"><button id="ResponseBtn" data-scroll data-scroll-speed="1">Show All Response
+                        <i class="ri-menu-add-line"></i></button></a>
+
             </div>
-           
+
         </div>
-        <!-- <div id="seventh">
-            <h1 data-scroll data-scroll-speed="1">Add Your Response </h1>
-            <div id="innerdiv5" data-scroll data-scroll-speed="2.5">
-                <form action="" id="Response">
-                    <label for="fname">First name:</label>
-                    <input type="text" id="fname"  name="fname" value="">
-                    <label for="lname">Last name:</label>
-                    <input type="text" id="lname" name="lname" value="">
-                    <label for="email">Email:</label>
-                    <input type="text" id="email" name="email" value=""><br><br>
-                    <label for="phone">Phone number:</label>
-                    <input type="text" id="phone" name="phone" value="">
-                    <label for="meal">Average Number of meals You ordered: </label>
-                    <input type="text" id="meal" name="meal" value=""><br><br>
-                    <label for="message">Write your message:</label><br>
 
-                    <textarea id="message" name="message" rows="10" cols="80">
-                    
-                        </textarea><br>
-                    
-                    <input id="submitdata" type="submit" value="Submit">
-                    <input id="reset" type="reset" value="Reset">
 
-                  </form>
+        <div id="sixth" style="background-color: #ffd24c3a;">
+            <h2>Designed by @ <b>Vanshita Jadiya</b> </h2>
             </div>
-
-
-        </div> -->
-
-        <div id="sixth">
-            <h1 data-scroll data-scroll-speed="1">Contact Us </h1>
-            <div id="icon">
-                <i class="ri-instagram-fill"></i>
-                <i class="ri-phone-fill"></i>
-                <i class="ri-whatsapp-fill"></i>
-                <i class="ri-mail-fill"></i>
-            </div>
-        </div>
+            
     </div>
- 
-    
+
+
     <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
 
@@ -446,9 +272,7 @@
         integrity="sha512-Mf/xUqfWvDIr+1B6zfnIDIiG7XHzyP/guXUWgV6PgaQoIFeXkJQR5XWh9fqAiCiRCpemabt3naV4jhDWVnuYDQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
- <script src="../javascripts/script.js"></script>
+    <script src="../javascripts/script.js"></script>
 </body>
 
 </html>
-
-

@@ -1,7 +1,12 @@
 <!DOCTYPE html>
+<html lang="en">
+
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FoodForYou</title>
     <link rel="icon" href="favicon.ico">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
@@ -16,15 +21,168 @@
     <link rel="stylesheet" href="../stylesheets/loco.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../stylesheets/style.css">
+    <style>
+         #indiv{
+            padding-top: 15vh;
+        }
+        #second #innerdiv1{
+            height: 60vh;
+        }
+        #second #innerdiv12{
+            height: 60vh;
+        }
+        .img3{
+            height: 50%;
+            margin-bottom: 10%;
+            margin-top: 10%;
+        } 
+        p{
+            margin-bottom: 10vh;
+        }
+        @media (max-width:400px) {
+            #second p{
+    font-size: 7vh;
+  }
+        }
+    </style>
 </head>
 <body>
     <div id="header">
         <div id="name"><i class="ri-home-heart-fill"></i> Food For You</div>
-        <div id="links"><a href="/">Home<i class="ri-home-line"></i></a><a href="/about">About<i class="ri-chat-2-line"></i></a><a href="/delivery">Delivery Details<i class="ri-briefcase-5-line"></i></a><a href="/menu">Menu<i class="ri-menu-add-line"></i></a><a
-            href="/contact">Book Tiffin<i class="ri-contacts-book-line"></i></a></div>
+        <div id="links"><a href="/">Home<i class="ri-home-line"></i></a><a href="/about">About<i
+                    class="ri-chat-2-line"></i></a><a href="/delivery">Delivery Details<i
+                    class="ri-briefcase-5-line"></i></a><a href="/menu">Menu<i class="ri-menu-add-line"></i></a><a
+                href="/contact">Book Tiffin<i class="ri-contacts-book-line"></i></a></div>
+                <div id="linked"><i class="ri-align-justify"></i>
+                    <div id="linkbox">
+                        <a href="/" style="padding-top: 0vw;">Home<i class="ri-home-line"></i></a><a href="/about">About<i
+                            class="ri-chat-2-line"></i></a><a href="/delivery">Delivery Details<i
+                            class="ri-briefcase-5-line"></i></a><a href="/menu">Menu<i class="ri-menu-add-line"></i></a><a
+                        href="/contact">Book Tiffin<i class="ri-contacts-book-line"></i></a>
+                    </div>
+                </div>
     </div>
     <div id="main" >
-        <div id="second" style="height: 120vh; margin-top: 10vh;">
+        <div id="second" >
+
+            <div id="indiv">
+                <div id="innerdiv1" data-scroll data-scroll-speed="2.5">
+                    <h1 data-scroll data-scroll-speed="1">Today's Menu </h1>
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div id="bf" class="ttt">
+                                    <div class="img1"><img src="../images/pictures/pohajalebi.jpg" alt=""></div>
+                                    <div class="img2"><img src="../images/pictures/aalopudi.jpg" alt=""></div>
+                                    <h2>BREAKFAST</h2>
+                                    <ul>
+                                        <li>Poha</li>
+                                        <li>Jalebi</li>
+                                    </ul>
+                                    <h5>OR</h5>
+                                    <ul>
+                                        <li>Aaloo Sabzi</li>
+                                        <li>Pudi</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div id="lunch" class="ttt">
+                                    <div class="img1"><img src="../images/pictures/daalchawal.jpg" alt=""></div>
+                                    <div class="img2"><img src="../images/pictures/MasalaBhindi.jpg" alt=""></div>
+                                    <h2>LUNCH</h2>
+                                    <ul>
+                                        <li>Daal</li>
+                                        <li>Chawal</li>
+                                        <li>Bhindi fry</li>
+                                        <li>Roti</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div id="eve" class="ttt">
+                                    <div class="img1"><img src="../images/pictures/pasta.jpg" alt=""></div>
+                                    <div class="img2"><img src="../images/pictures/sandwich.jpg" alt=""></div>
+                                    <h2>EVENING SNACKS</h2>
+                                    <ul>
+                                        <li>Pasta</li>
+                                        <h5>OR</h5>
+                                        <li>SandWich</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div id="dinner" class="ttt">
+                                    <div class="img1"><img src="../images/pictures/daalchawal.jpg" alt=""></div>
+                                    <div class="img2"><img src="../images/pictures/rajma.jpg" alt=""></div>
+                                    <h2>DINNER</h2>
+                                    <ul>
+                                        <li>Daal</li>
+                                        <li>Chawal</li>
+                                        <li>Rajma</li>
+                                        <li>Parathe</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div id="innerdiv12" data-scroll data-scroll-speed="2.5">
+                    <h1 data-scroll data-scroll-speed="1">Specials </h1>
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div id="rasmalai" class="special">
+                                    <div class="img3"><img src="../images/pictures/Rasmalai.jpg" alt=""></div>
+                                    <div class="content"><b>RASMALAI</b></div>
+
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div id="pavbhaji" class="special">
+                                    <div class="img3"><img src="../images/pictures/pavbhaji.webp" alt=""></div>
+                                    <div class="content"><b>PAV-BHAJI</b></div>
+
+
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div id="gulabjamun" class="special">
+                                    <div class="img3"><img src="../images/pictures/gulab-jamun.jpg" alt=""></div>
+                                    <div class="content"><b>GULAB JAMUN</b></div>
+
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div id="custurd" class="special">
+                                    <div class="img3"><img src="../images/pictures/fruit-custard.jpg" alt=""></div>
+                                    <div class="content"><b>FRUIT CUSTURD</b></div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <div id="sbn" class="swiper-button-next"></div>
+                    <div id="sbp" class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+
+                </div>
+
+            </div>
+            <p style=" font-size: 2vw;
+            text-align: center;
+            font-family: 'Marcellus', serif;
+            color: #635666; margin-top: 20vh;">For any change or query, directly contact us.</p>
+
+        </div>
+        <!-- <div id="second" style="height: 120vh; margin-top: 10vh;">
 
             <div id="indiv">
                 <div id="innerdiv1" data-scroll data-scroll-speed="2.5">
@@ -136,14 +294,10 @@
 
                 </div>
 
-            </div>
-            <p style=" font-size: 40px;
-            text-align: center;
-            font-family: 'Marcellus', serif;
-            color: #635666; margin-top: 10vh;">For any change or query, directly contact us.</p>
+            </div> -->
+            
         </div>
     </div>
-    <!-- <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>

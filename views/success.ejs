@@ -65,9 +65,7 @@
         
         body {
             height: 100vh;
-            /* display: flex;
-            justify-content: center;
-            align-items: center; */
+            
         }
         #cntdiv{
             margin: 10vh;
@@ -83,8 +81,18 @@
 <body>
     <div id="header">
         <div id="name"><i class="ri-home-heart-fill"></i> Food For You</div>
-        <div id="links"><a href="/">Home<i class="ri-home-line"></i></a><a href="/about">About<i class="ri-chat-2-line"></i></a><a href="/delivery">Delivery Details<i class="ri-briefcase-5-line"></i></a><a href="/menu">Menu<i class="ri-menu-add-line"></i></a><a
-            href="/contact">Book Tiffin<i class="ri-contacts-book-line"></i></a></div>
+        <div id="links"><a href="/">Home<i class="ri-home-line"></i></a><a href="/about">About<i
+                    class="ri-chat-2-line"></i></a><a href="/delivery">Delivery Details<i
+                    class="ri-briefcase-5-line"></i></a><a href="/menu">Menu<i class="ri-menu-add-line"></i></a><a
+                href="/contact">Book Tiffin<i class="ri-contacts-book-line"></i></a></div>
+                <div id="linked"><i class="ri-align-justify"></i>
+                    <div id="linkbox">
+                        <a href="/" style="padding-top: 0vw;">Home<i class="ri-home-line"></i></a><a href="/about">About<i
+                            class="ri-chat-2-line"></i></a><a href="/delivery">Delivery Details<i
+                            class="ri-briefcase-5-line"></i></a><a href="/menu">Menu<i class="ri-menu-add-line"></i></a><a
+                        href="/contact">Book Tiffin<i class="ri-contacts-book-line"></i></a>
+                    </div>
+                </div>
     </div>
     <div id="cntdiv"><h1 style="margin: 50px;  color: #4a3737;">Order Placed SuccessFully </h1>
 
@@ -94,6 +102,8 @@
                 <path class="tick" fill="none" stroke="#FFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M14 27l5.917 4.917L34 17"/>
             </svg>
         </div></div>
+    <script src="../javascripts/script.js"></script>
+
     <script>
         let path = document.querySelector(".tick");
 let length = path.getTotalLength();

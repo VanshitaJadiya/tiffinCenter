@@ -20,105 +20,108 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../stylesheets/style.css">
     <style>
-        *{
+        * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
             font-family: 'Marcellus', serif;
+            color: #4a3737;
         }
 
         body,
         html {
-            /* width: 100vw;
-            overflow-x: hidden; */
-            /* display: flex; */
+
             justify-content: center;
             font-family: 'Marcellus', serif;
-            /* overflow: hidden; */
-           
-
-            
-        }
-        body{
-            /* background: url(../public/images/pictures/formmbg.webp) ; */
-            background: linear-gradient(150deg,   #e0ee75, rgb(174 231 168))
-            /* display: flex;
-            align-items: center;
-            justify-content: center; */
 
         }
-        
-        .main{
-            max-width: 700px;
-            width: 100%;
-            background: #fff;
 
-        }
-        .title{
-            font-size: 50px;
-            font-family: 'Times New Roman', Times, serif;
+
+
+        .title {
+            font-size: 4vw;
             text-decoration: underline;
+            padding-bottom: 3vh;
         }
-        form {
-            max-width: 700px;
-            width: 100%;
+
+        #form1 {
+            max-width: 70vw;
+            /* width: 100%; */
             background: #fff;
-
-
-            border: 2px solid black;
-            /* border-style:dotted; */
-            width: 80vw;
+            border: 0.2vw solid black;
+            width:fit-content;
             height: 80vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            margin-top: 10vh;
-            border-radius: 10px;
-            margin-top: 100px;
-            font-size: 25px;
+            margin-top: 15vh;
+            border-radius: 2%;
+            font-size: 2vw;
 
         }
-        /* .main #title{
-            color: black;
-        } */
-        form>div{
-           
 
-
+        #form1>div {
             display: flex;
             align-items: center;
             justify-content: center;
-            text-shadow: 1px 1px 2px rgb(119, 119, 118);
-            margin: 10px;
-            /* color: #472D2D; */
-
+            /* text-shadow: 1px 1px 2px rgb(119, 119, 118); */
+            margin: 2vh;
         }
-        button{
-            padding: 10px;
-            border-radius: 6px;
+
+        button {
+            padding: 1vw;
+            border-radius: 2%;
             outline: none;
             color: #fff;
             font-size: large;
-            border:none;
-            width: 180px;
-            background: linear-gradient(135deg,   #e0ee75, rgb(174 231 168))
+            border: none;
+            width: fit-content;
+            background-color: #0f0e0e96;
+        }
+
+        input {
+            padding: 2vw;
+            margin-left: 1vw;
+        }
+
+        textarea {
+            padding: 1vw;
+            margin-left: 1vw;
+        }
+
+        @media (max-width:600px) {
+            .title{
+                font-size: 5vw;
+            }
+            div{
+                font-size: 4vw;
+            }
+            #form1{
+                padding: 0vw;
+            }
             
         }
-        /* button input{
-            font-size: 10px;
-        } */
-        input{
-            /* font-size: 34px; */
-            padding: 10px;
-            margin-left: 10px;
-            /* border-bottom-width: 2px; */
-            /* box-shadow: #472D2D 4px; */
-            /* transition: all 0.3s ease; */
+        @media (max-width:500px) {
+            #form1{
+                display: flex;
+                flex-direction: column;
+                width: 97vw;
+                border: 0vw transparent;
+            }
+            div{
+                margin: 0vw;
+            }
         }
-        textarea{
-            padding: 10px;
-            margin-left: 10px;
+        @media (max-width:600px) {
+            .title{
+                font-size: 6vw;
+            }
+            div{
+                font-size: 5vw;
+            }
+            
+            
         }
     </style>
 </head>
@@ -126,21 +129,37 @@
 <body>
     <div id="header">
         <div id="name"><i class="ri-home-heart-fill"></i> Food For You</div>
-        <div id="links"><a href="/">Home<i class="ri-home-line"></i></a><a href="/about">About<i class="ri-chat-2-line"></i></a><a href="/delivery">Delivery Details<i class="ri-briefcase-5-line"></i></a><a href="/menu">Menu<i class="ri-menu-add-line"></i></a><a
-            href="/contact">Book Tiffin<i class="ri-contacts-book-line"></i></a></div>
+        <div id="links"><a href="/">Home<i class="ri-home-line"></i></a><a href="/about">About<i
+                    class="ri-chat-2-line"></i></a><a href="/delivery">Delivery Details<i
+                    class="ri-briefcase-5-line"></i></a><a href="/menu">Menu<i class="ri-menu-add-line"></i></a><a
+                href="/contact">Book Tiffin<i class="ri-contacts-book-line"></i></a></div>
+                <div id="linked"><i class="ri-align-justify"></i>
+                    <div id="linkbox">
+                        <a href="/" style="padding-top: 0vw;">Home<i class="ri-home-line"></i></a><a href="/about">About<i
+                            class="ri-chat-2-line"></i></a><a href="/delivery">Delivery Details<i
+                            class="ri-briefcase-5-line"></i></a><a href="/menu">Menu<i class="ri-menu-add-line"></i></a><a
+                        href="/contact">Book Tiffin<i class="ri-contacts-book-line"></i></a>
+                    </div>
+                </div>
     </div>
     <div id="main" style="display: flex;
     align-items: center;
     justify-content: center;">
-    <form action="/submitresponse" method="post">
-        <div class="title" > Feedback Form  </div>
-        <div>Full Name :  <input type="text" name="name" id="" placeholder="Enter your name"> </div>
-        <div>Image-url: <input type="text" name="image" id=""placeholder="Enter your image url"></div>
-         <div>Your Response : <textarea name="response" id="" cols="50" rows="5" placeholder=" Add your response here"></textarea></div>
-         <!-- <div><button>Submit</button></div> -->
-         <button>Submit</button>
-      </form>
+
+        <form id="form1" action="/submitresponse" method="post" enctype="multipart/form-data">
+            <div class="title"> Feedback Form </div>
+
+            <div>Full Name : <input type="text" name="name" id="" > </div>
+            <div>Your Response : <textarea name="response" id="" cols="30" rows="2"
+                    ></textarea></div>
+
+            <div>Add Your Image: <input id="open" type="file" name="image"></div>
+            <button type="submit" style="margin-top: 30px;">Submit</button>
+        </form>
+
     </div>
+    <script src="../javascripts/script.js"></script>
+
 </body>
 
 </html>

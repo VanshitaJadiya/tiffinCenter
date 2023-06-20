@@ -1,118 +1,111 @@
+function abcd() {
+  gsap.registerPlugin(ScrollTrigger);
 
+  const locoScroll = new LocomotiveScroll({
+    el: document.querySelector("#main"),
+    smooth: true,
 
-function abcd(){
-    gsap.registerPlugin(ScrollTrigger);
+    // for tablet smooth
+    tablet: { smooth: true },
 
-const locoScroll = new LocomotiveScroll({
-  el: document.querySelector("#main"),
-  smooth: true,
+    // for mobile
+    smartphone: { smooth: true },
+  });
+  locoScroll.on("scroll", ScrollTrigger.update);
 
-  // for tablet smooth
-  tablet: { smooth: true },
+  ScrollTrigger.scrollerProxy(
+    "#main",
+    {
+      scrollTop(value) {
+        return arguments.length
+          ? locoScroll.scrollTo(value, 0, 0)
+          : locoScroll.scroll.instance.scroll.y;
+      },
+      getBoundingClientRect() {
+        return {
+          top: 0,
+          left: 0,
+          width: window.innerWidth,
+          height: window.innerHeight,
+        };
+      },
+    },
 
-  // for mobile
-  smartphone: { smooth: true }
-});
-locoScroll.on("scroll", ScrollTrigger.update);
+    ScrollTrigger.addEventListener("refresh", () => locoScroll.update())
+  );
 
-ScrollTrigger.scrollerProxy("#main", {
-  scrollTop(value) {
-    return arguments.length
-      ? locoScroll.scrollTo(value, 0, 0)
-      : locoScroll.scroll.instance.scroll.y;
-  },
-  getBoundingClientRect() {
-    return {
-      top: 0,
-      left: 0,
-      width: window.innerWidth,
-      height: window.innerHeight
-    };
-  }},
-
-ScrollTrigger.addEventListener("refresh", () => locoScroll.update()));
-
-ScrollTrigger.refresh();
-
+  ScrollTrigger.refresh();
 }
 abcd();
 
-// function bcde(){
-  
-  var a=document.querySelector("#abcd h1");
-        var clutter="";
-        var j=0;
-        for(var i=0;i<=Math.floor(a.textContent.length/2);i++){
-            clutter+=`<span data-delay="${i}">${a.textContent.charAt(j)}</span>`
-            console.log(i);
-            j++;
-
-        }
-        for(var i=Math.floor(a.textContent.length/2);i>=0;i--){
-            clutter+=`<span data-delay="${i}">${a.textContent.charAt(j)}</span>`
-            console.log(i);
-            j++;
-
-        }
-        document.querySelector("h1").innerHTML=clutter;
-        document.querySelectorAll("h1 span").forEach(function(eleme){
-    0
-            gsap.to(eleme,{
-                y:0,
-                opacity:1,
-                duration:1,
-                ease:Expo.easeInOut,
-                display:"inline",
-                delay:eleme.dataset.delay*.1
-            })
-           
-        })
-        // var t1= gsap.timeline();
-     
-       
-  //     }
-  // bcde();
-
-gsap.to(".test",{
-    // scrollTrigger:{
-    //     scroller:"#main",
-    //     trigger:".test",
-    //     start:"top 90%",
-    //     // markers: true,
-    // },
+var a = document.querySelector("#abcd h1");
+var clutter = "";
+var j = 0;
+for (var i = 0; i <= Math.floor(a.textContent.length / 2); i++) {
+  clutter += `<span data-delay="${i}">${a.textContent.charAt(j)}</span>`;
+  console.log(i);
+  j++;
+}
+for (var i = Math.floor(a.textContent.length / 2); i >= 0; i--) {
+  clutter += `<span data-delay="${i}">${a.textContent.charAt(j)}</span>`;
+  console.log(i);
+  j++;
+}
+document.querySelector("h1").innerHTML = clutter;
+document.querySelectorAll("h1 span").forEach(function (eleme) {
+  0;
+  gsap.to(eleme, {
+    y: 0,
     opacity: 1,
-    y:20,
-    duration:1.5,
-    ease:"expo.easeInOut"
-})
+    duration: 1,
+    ease: Expo.easeInOut,
+    display: "inline",
+    delay: eleme.dataset.delay * 0.1,
+  });
+});
 
-function swipper(){
+function swipper() {
   var swiper = new Swiper(".mySwiper", {
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: {
       delay: 2500,
       disableOnInteraction: false,
+    pauseOnMouseEnter:true,
+
     },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
-    grabCursor:true,
+    grabCursor: true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
   });
 }
-swipper();  
+swipper();
 
-function locomotive(){
+function locomotive() {
   const scroller = new LocomotiveScroll({
-    el: document.querySelector('#main'),
-    smooth: true
-})
+    el: document.querySelector("#main"),
+    smooth: true,
+  });
 }
 locomotive();
+var navopen=0;
 
-
+function openNav(){
+  document.querySelector("#linked>i").addEventListener("click",function(){
+    if(navopen===0){
+      document.querySelector("#linkbox").style.display="flex";
+      navopen=1;
+    }
+    else if(navopen===1){
+      document.querySelector("#linkbox").style.display="none";
+      navopen=0;
+    }
+  })
+}
+openNav();
