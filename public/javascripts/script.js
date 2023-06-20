@@ -91,13 +91,19 @@ function locomotive() {
   const scroller = new LocomotiveScroll({
     el: document.querySelector("#main"),
     smooth: true,
+    getDirection: true,
     mobile: {
-      smooth: true
-  },
-  tablet: {
-      smooth: true
-  }
+      smooth: true,
+      inertia: 0.8,
+      getDirection: true,
+    },
+    tablet: {
+      smooth: true,
+      inertia: 0.8,
+      getDirection: true,
+    },
   });
+  
 }
 locomotive();
 var navopen=0;
