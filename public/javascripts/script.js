@@ -91,6 +91,12 @@ function locomotive() {
   const scroller = new LocomotiveScroll({
     el: document.querySelector("#main"),
     smooth: true,
+    mobile: {
+      smooth: true
+  },
+  tablet: {
+      smooth: true
+  }
   });
 }
 locomotive();
