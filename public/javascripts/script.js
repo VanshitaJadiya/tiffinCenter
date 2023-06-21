@@ -53,7 +53,6 @@ for (var i = Math.floor(a.textContent.length / 2); i >= 0; i--) {
 }
 document.querySelector("h1").innerHTML = clutter;
 document.querySelectorAll("h1 span").forEach(function (eleme) {
-  0;
   gsap.to(eleme, {
     y: 0,
     opacity: 1,
@@ -105,7 +104,7 @@ function locomotive() {
   });
   
 }
-locomotive();
+// locomotive();
 // var navopen=0;
 
 // function openNav(){
