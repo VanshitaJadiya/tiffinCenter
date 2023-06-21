@@ -2,7 +2,7 @@ function abcd() {
   gsap.registerPlugin(ScrollTrigger);
 
   const locoScroll = new LocomotiveScroll({
-    el: document.querySelector("#main"),
+    el: document.querySelector("body"),
     smooth: true,
     smoothMobile: true,
 
@@ -89,10 +89,11 @@ swipper();
 
 function locomotive() {
   const scroller = new LocomotiveScroll({
-    el: document.querySelector("#main"),
+    el: document.querySelector("body"),
     smooth: true,
     getDirection: true,
-    mobile: {
+    reloadOnContextChange	:true,
+    smartphone: {
       smooth: true,
       inertia: 0.8,
       getDirection: true,
@@ -105,7 +106,7 @@ function locomotive() {
   });
   
 }
-// locomotive();
+locomotive();
 // var navopen=0;
 
 // function openNav(){
