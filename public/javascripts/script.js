@@ -4,6 +4,7 @@ function abcd() {
   const locoScroll = new LocomotiveScroll({
     el: document.querySelector("#main"),
     smooth: true,
+    smoothMobile: true,
 
     // for tablet smooth
     tablet: { smooth: true },
