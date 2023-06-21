@@ -106,18 +106,18 @@ function locomotive() {
   
 }
 locomotive();
-var navopen=0;
+// var navopen=0;
 
-function openNav(){
-  document.querySelector("#linked>i").addEventListener("click",function(){
-    if(navopen===0){
-      document.querySelector("#linkbox").style.display="flex";
-      navopen=1;
-    }
-    else if(navopen===1){
-      document.querySelector("#linkbox").style.display="none";
-      navopen=0;
-    }
-  })
-}
-openNav();
+// function openNav(){
+//   document.querySelector("#linked>i").addEventListener("click",function(){
+//     if(navopen===0){
+//       document.querySelector("#linkbox").style.display="flex";
+//       navopen=1;
+//     }
+//     else if(navopen===1){
+//       document.querySelector("#linkbox").style.display="none";
+//       navopen=0;
+//     }
+//   })
+// }
+// openNav();
