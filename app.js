@@ -7,8 +7,10 @@ var passport= require('passport')
 var expressSession= require('express-session')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
+var mongoose= require('mongoose')
 var app = express();
+require("dotenv").config();
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
