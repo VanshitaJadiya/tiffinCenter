@@ -73,18 +73,17 @@ router.get("/addResponse", function (req, res, next) {
   res.render("response");
 });
 
-router.post("/submitresponse", upload.single("image"), function (req, res) {
-  userModal
+router.post("/submitresponse", upload.single("image"),async function (req, res) {
+  var data = await userModal
     .create({
-      name: req.body.name,
+      username: req.body.name,
       response: req.body.response,
       image: req.file.filename,
     })
-    .then(function (data) {
-      console.log(data);
 
+      console.log(data);
       res.redirect("/showAllResponse");
-    });
+    
 });
 router.get("/showAllResponse", function (req, res) {
   userModal.find().then(function (alldata) {

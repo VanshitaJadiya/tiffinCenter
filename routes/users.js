@@ -11,7 +11,7 @@ mongoose.connect("mongodb+srv://jadiyavanshita:naman@cluster0.xb9nrh0.mongodb.ne
   console.log(error);
 })
 var userSchema= mongoose.Schema({
-  name:String,
+  username:String,
   image:String,
   response: String
 })
